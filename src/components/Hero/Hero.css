@@ -1,0 +1,47 @@
+#hero {
+  height: 100vh;
+  background-color: #180068;
+  position: relative;
+  overflow: hidden;
+
+}
+.main-title {
+  font-size: 15rem;
+  color: #eba7ac;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.textone {
+    position: absolute;
+
+  bottom: 10%;
+  left: 5%;
+  font-size: 1rem;
+  color: #eba7ac;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  width: 25%;
+}
+.btn{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: #F2A518;
+    color: #000;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius:1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+}
