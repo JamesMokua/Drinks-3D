@@ -1,9 +1,10 @@
 import React, { Suspense, useRef, useEffect } from "react";
 import "./Hero.css";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF,useScroll,ScrollControls,Scroll} from "@react-three/drei";
+import { useGLTF,ScrollControls,Scroll} from "@react-three/drei";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 
 
 function Model(props) {
@@ -13,6 +14,7 @@ function Model(props) {
   const group2 = useRef();
   const { camera } = useThree();
   camera.position.z = 5;
+ 
  
 
 
@@ -28,14 +30,13 @@ function Model(props) {
   return (
     <mesh ref={myMesh}>
       <group {...props} dispose={null}
-      ><ScrollControls pages={3} >
-              <Scroll >
+     >
+    
         <group
           ref={group1}
           position={[-1, 0, 0.5]}
           rotation={[-Math.PI / 2, -Math.PI / 5, 0.5]}
           scale={[0.02, 0.02, 0.02]}
-          
         >
           <mesh
             geometry={nodes["Can_01_-_Default_0"].geometry}
@@ -46,9 +47,6 @@ function Model(props) {
             material={materials["02_-_Default"]}
           />
         </group>
-  </Scroll>
-
-            </ScrollControls>
         <group
           ref={group2}
           position={[0, -2, 0.5]}
