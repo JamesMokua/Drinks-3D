@@ -1,9 +1,8 @@
 import React, { Suspense, useRef, useEffect } from "react";
-import "./Hero.css";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF,ScrollControls,Scroll} from "@react-three/drei";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Overlay from "./Overlay";
+
 
 
 
@@ -69,15 +68,11 @@ function Model(props) {
   );
 }
 const Hero = () => {
-  useEffect(() => {
-    AOS.init();
-  }, [])
+ 
   return (
     <>
       
-      <div id="hero">
-    
-        <h1 className="main-title" data-aos="slide-left" data-aos-duration="2000" data-aos-easing="ease-in-out-back" data-aos-delay="50">REFRESHING</h1>
+     
       
       
         <Canvas data-aos="fade-down"  data-aos-duration="2000">
@@ -88,17 +83,15 @@ const Hero = () => {
             <spotLight intensity={1} position={[100, -1000, 100]} />
             <spotLight intensity={1} position={[-100, 1000, -100]} />
             <spotLight intensity={10} position={[-180, -1000, -100]} />
-            
-                <Model  />
-          
+            <ScrollControls pages={3} >
+                
+                <Model />
+                <Overlay/>
+            </ScrollControls>
           </Suspense>
         </Canvas>
    
-        <div className="sub-text">
-          <p className="textone" data-aos="fade-up"  data-aos-duration="2000">Our varieties of sodas will leave you wanting more, no reason not to try it!</p>
-          <button className="btn" data-aos="fade-up"  data-aos-duration="2000">Try It Now!</button>
-        </div>
-      </div>
+       
     
      
     </>

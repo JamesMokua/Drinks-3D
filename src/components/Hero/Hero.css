@@ -3,7 +3,22 @@
   background-color: #180068;
   position: relative;
   overflow: hidden;
-
+}
+#hangover {
+  height: 100vh;
+  background-color: #f6d5d8;
+  position: relative;
+  overflow: hidden;
+}
+#end {
+  height: 100vh;
+  background-color: #f6d5d8;
+  position: relative;
+  overflow: hidden;
+}
+.section {
+  height: 100%;
+  width: 100vw;
 }
 .main-title {
   font-size: 15rem;
@@ -17,9 +32,16 @@
   text-align: center;
   width: 100%;
 }
+.second-main-title {
+  font-size: 8rem;
+  color: #180068;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
 
 .textone {
-    position: absolute;
+  position: absolute;
 
   bottom: 10%;
   left: 5%;
@@ -30,20 +52,17 @@
   margin-right: 1rem;
   width: 25%;
 }
-.btn{
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-    background-color: #F2A518;
-    color: #000;
-    border: none;
-    padding: 1rem 1rem;
-    border-radius:1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    
+.btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background-color: #f2a518;
+  color: #000;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2rem;
 }
-
-
