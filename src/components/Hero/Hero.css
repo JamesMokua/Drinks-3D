@@ -1,25 +1,30 @@
 #hero {
   height: 100vh;
-  background-color: #180068;
   position: relative;
-  overflow: hidden;
+
 }
 #hangover {
   height: 100vh;
-  background-color: #f6d5d8;
+  /* background-color: #f6d5d8; */
   position: relative;
   overflow: hidden;
 }
 #end {
   height: 100vh;
-  background-color: #f6d5d8;
+  /* background-color: #f6d5d8; */
   position: relative;
   overflow: hidden;
+}
+.model{
+  
+  z-index: 999;
 }
 .section {
   height: 100%;
   width: 100vw;
+
 }
+
 .main-title {
   font-size: 15rem;
   color: #eba7ac;
@@ -34,7 +39,7 @@
 }
 .second-main-title {
   font-size: 8rem;
-  color: #180068;
+  color: #f6d5d8;
   font-weight: 700;
   text-align: center;
   width: 100%;

@@ -14,7 +14,7 @@ const Overlay = (props) => {
   return (
     <Scroll html>
       <Section>
-        <div id="hero">
+        <div id="hero" >
           <h1
             className="main-title"
             data-aos="slide-left"
@@ -35,21 +35,13 @@ const Overlay = (props) => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div id="hangover">
-          <h1
-            className="second-main-title"
-            
-          >
-            QUENCH YOUR THIRST
-          </h1>
+      <Section >
+        <div id="hangover" >
+          <h1 className="second-main-title">QUENCH YOUR THIRST</h1>
         </div>
       </Section>
       <Section>
-        <div id="end">
-         
-          
-        </div>
+        <div id="end"></div>
       </Section>
     </Scroll>
   );
