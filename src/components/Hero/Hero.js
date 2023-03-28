@@ -6,6 +6,7 @@ import "./Hero.css";
 import Model from "../model";
 
 const Hero = () => {
+  
   return (
     <>
       <Canvas data-aos="fade-down" data-aos-duration="2000">
@@ -17,9 +18,13 @@ const Hero = () => {
           <spotLight intensity={1} position={[-100, 1000, -100]} />
           <spotLight intensity={10} position={[-180, -1000, -100]} />
           <ScrollControls pages={3}>
-            <Model />
+            <Model/>
             <Overlay />
           </ScrollControls>
+          <hemisphereLight intensity={0.1} />
+      <directionalLight position={[2, 8, -5]} castShadow intensity={2} shadow-mapSize={2048} shadow-bias={-0.001}>
+        <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10, 0.1, 30]} />
+      </directionalLight>
         </Suspense>
       </Canvas>
     </>

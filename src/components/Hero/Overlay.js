@@ -2,9 +2,13 @@ import React, { useEffect } from "react";
 import "./Hero.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
 
 import { Scroll } from "@react-three/drei";
 const Overlay = (props) => {
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 50, delay: 20 });
   useEffect(() => {
     AOS.init();
   }, []);
@@ -12,7 +16,7 @@ const Overlay = (props) => {
     return <div className="section">{props.children}</div>;
   };
   return (
-    <Scroll html>
+    <Scroll html ref={scrollRef}>
       <Section>
         <div id="hero" >
           <h1
